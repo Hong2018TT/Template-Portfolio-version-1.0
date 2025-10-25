@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MY PORTFOLIO</title>
+    <!-- For Link Style Css -->
+    <link rel="stylesheet" href="css/index.css"><link rel="stylesheet" href="css/about-me.css">
+    <link rel="stylesheet" href="css/education.css"><link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/background-anime.css"><link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/project.css"><link rel="stylesheet" href="css/loader.css">
+
+    <link rel="icon" href="image/logo.jpg">
+
+    <!-- Link style Css Dark light change -->
+    <link rel="stylesheet" href="css/dark-style.css">
+
+    <!-- Link for boostrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>PORTFOLIO</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link Javascript -->
+    <script src="js/script.js"></script>
+
+    <!-- Link sweealert 2 model -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Link AOS for scroll animation text for content -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Link boxicons 2.1.4 -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- jQuery (Latest Version) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <style>
+        html, body {
+            overflow-x: hidden;
+            width: 100%;font-family: Oswald;
+            background-color: rgba(84,58,183,1);
+            /* background-color: #F7374F; */
+        }
+        /* Width & height of the scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        /* Scrollbar Track (Background) */
+        ::-webkit-scrollbar-track {
+            backdrop-filter: blur(7px);
+            background: rgba(255, 255, 255, .1);  
+        }
+        /* Scrollbar Handle */
+        ::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #f1f1f136;
+        }
+        
+        .Homeprofile,.about-section,.education-section,.skill-section,.experience-section,.project-section,.contact-section{
+            padding-top: 7rem;
+            position:relative;
+            z-index: 2;
+        }
+
+        .canvas1{
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 1;
+            width: 100%; height: 100%;
+        }
+</style>
+
+<canvas id="canvas1" class="canvas1"></canvas>
+    
+<div class="header-wase">
+    <!--Content before waves-->
+    <div class="inner-header">
+        <!--Just the logo.. Don't mind this-->
+        <header class="header-container">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="logo" data-aos="fade-right" data-aos-duration="1000">
+                    <a href="#home" class="" style="cursor: pointer;">Web Designer</a>
+                </div>
+    
+                <!-- For Toggle button when @media screen sm -->
+                <span for="" class="icons" onclick="toggleMenu()">
+                    <i class='bx bx-menu' id="menu-icon"></i>
+                    <i class='bx bx-x' id="close-icon"></i>
+                </span>
+    
+                <nav class="navbara" id="navMenu">
+                    <div class="navbar-menu-style" data-aos="fade-down" data-aos-duraton="1000">
+                        <a href="#home">Home</a>
+                    </div>
+                    <div class="navbar-menu-style" data-aos="fade-down" data-aos-duration="1200">
+                        <a href="#about">About me</a>
+                    </div>
+                    <div class="navbar-menu-style" data-aos="fade-down" data-aos-duration="1400">
+                        <a href="#education">Education</a>
+                    </div>
+                    <div class="navbar-menu-style" data-aos="fade-down" data-aos-duration="1600">
+                        <a href="#skills">Skills</a>
+                    </div>
+                    <div class="navbar-menu-style" data-aos="fade-down" data-aos-duration="1600">
+                        <a href="#project">Project</a>
+                    </div>
+                    <div class="navbar-menu-style" data-aos="fade-down" data-aos-duration="1800">
+                        <a href="#experience">Experience</a>
+                    </div>
+                    <div class="navbar-menu-style darkLight-searchBox" data-aos="zoom-in-left" data-aos-duration="1300">
+                        <div class="dark-light">
+                            <i class='bx bx-moon moon'></i>
+                            <i class='bx bx-sun sun'></i>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Section for my profile -->
+        <section class="Homeprofile" id="home" >
+            <!-- Background Animation Layers -->
+
+            <!-- Container Loader style -->
+            <div class="container-loader">
+                <div class="loader1"></div>
+            </div>
+            <div class="container-loader-one">
+                <div class="loader2"></div>
+            </div>
+
+            <div class="container-home container d-flex justify-content-start align-items-start p-2 gap-5 p-lg-5 p-md-5" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Profile Image -->
+                <div class="profile-image" data-aos="zoom-in-right" data-aos-duration="1500">
+                    <div class="card-profile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <img src="https://placehold.co/140x140" alt="Profile Image" height="400px">
+                    </div>
+                </div>
+                <!-- Hero Content -->
+                <div class="hero-content">
+                    <h2 data-aos="fade-left" data-aos-duration="1000">Hi, Mr <span class="" >POP</span></h2>
+                    
+                    <div class="wrapper" data-aos="fade-left" data-aos-duration="1300">
+                        <div class="static-txt">I'm</div>
+                        <ul class="dynamic-txts">
+                            <li><span>Front-end Developer</span></li>
+                            <li><span>Back-end Developer</span></li>
+                            <li><span>Designer</span></li>
+                        </ul>
+                    </div>
+
+                    <p data-aos="fade-left" data-aos-duration="1500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis deserunt veritatis sed? Molestiae a dolore pariatur error nam, tempora voluptatibus. Laboriosam velit aut aliquid omnis expedita temporibus molestiae maiores, ea itaque ratione eos voluptate, sint quidem accusantium non voluptatibus enim. Vitae laborum perferendis illo, quasi voluptatibus in, neque necessitatibus quod magnam repellendus soluta velit!
+                    </p>
+                    <!-- Social Media Icons -->
+                    <div class="spical_write">
+                        <a href="https://www.facebook.com/" class="icon facebook" data-aos="fade-left" data-aos-duration="1600">
+                           <div class="tooltip">
+                              Facebook
+                           </div>
+                           <span><i class="fab fa-facebook-f"></i></span>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/" class="icon instagram" data-aos="fade-left" data-aos-duration="1800">
+                           <div class="tooltip">
+                              Instagram
+                           </div>
+                           <span><i class="fab fa-instagram"></i></span>
+                        </a>
+
+                        <a href="https://github.com" data-aos="fade-left" data-aos-duration="2000">
+                            <div class="icon github">
+                                <div class="tooltip">
+                                    Github
+                                </div>
+                                <span><i class="fab fa-github"></i></span>
+                            </div>  
+                        </a>
+                        
+         
+                        <a href="https://www.youtube.com" class="icon youtube" data-aos="fade-left" data-aos-duration="2200">
+                           <div class="tooltip">
+                              YouTube
+                           </div>
+                           <span><i class="fab fa-youtube"></i></span>
+                        </a>
+         
+                        <a href="#" class="icon tiktok" data-aos="fade-left" data-aos-duration="2400">
+                           <div class="tooltip">
+                            Tiktok
+                           </div>
+                           <span><i class="fa-brands fa-tiktok"></i></span>
+                        </a>
+                        
+                    </div>
+
+                    <!-- Hire Me Button -->
+                    <div class="btn-con-hire d-flex" data-aos="fade-up-left" data-aos-duration="1600">
+                        <a href="" class="hire-me-btn content-me me-3" download>Download CV</a>
+                        <a href="#contact" class="content-me">Contact</a>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class="down-anime-icon text-white"><i class='bx bxs-chevron-down'></i></div>
+        </section>
+        
+        <section class="about-section" id="about">
+
+            <h2 class="title text-center mt-5" data-aos="zoom-in" data-aos-duration="1200">About Me</h2>
+            <div class="about-content container d-flex justify-content-center align-items-center p-2 gap-5 p-lg-5 p-md-5" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Left Side -->
+                <div class="personal-info" data-aos="flip-left" data-aos-duration="1400">
+                    <h3>Personal Information</h3>
+                    <table class="info-table">
+                        <tbody>
+                            <tr>
+                                <td><b>First Name:</b> Lorem</td>
+                                <td><b>Last Name:</b> ipsum dolor.</td>
+                            </tr>
+                            <tr>
+                                <td><b>Age:</b> ipsum dolor.</td>
+                                <td><b>Nationality:</b> ipsum dolor.</td>
+                            </tr>
+                            <tr>
+                                <td><b>Freelance:</b> ipsum dolor.</td>
+                                <td><b>Address:</b> ipsum dolor.</td>
+                            </tr>
+                            <tr>
+                                <td><b>Phone:</b> +ipsum dolor.</td>
+                                <td><b>Phone:</b> ipsum dolor@gamil.com</td>
+                            </tr>
+                            <tr>
+                                <td><b>Language:</b> English</td>
+                                <!-- <td>LinkedIn: SeavpeavPech</td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Right Side -->
+                <div class="stats" data-aos="flip-left" data-aos-duration="1000">
+                    <div class="stat-box">
+                        <h4>---</h4>
+                        <p>Months of Experiences</p><br>
+                    </div>
+                    <div class="stat-box">
+                        <h4>---</h4>
+                        <p>Completed Projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="education-section" id="education">
+
+            <h2 class="title text-center pb-5" data-aos="zoom-in" data-aos-duration="1000">My <span>Education</span></h2>
+
+            <div class="education-content container d-flex gap-5 p-3" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="column-education">
+                        <h3 class="mb-4" data-aos="fade-right" data-aos-duration="1000">Education</h3>
+
+                        <div class="box-style" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
+
+                            <div class="education-box" >
+                                <div class="content">
+                                    <div class="year">2020-Present<i class='bx bxs-calendar'></i></div>
+                                    <h4>bachelor's degree</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita eveniet animi accusantium commodi quia cumque consequuntur itaque beatae alias exercitationem?</p>
+                                </div>
+                            </div>
+                            <div class="education-box" >
+                                <div class="content">
+                                    <div class="year">2020-Present<i class='bx bxs-calendar'></i></div>
+                                    <h4>bachelor's degree</h4>
+                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita eveniet animi accusantium commodi quia cumque consequuntur itaque beatae alias exercitationem?</p>
+                                </div>
+                            </div>
+                            <div class="education-box">
+                                <div class="content">
+                                    <div class="year">2010-2021 <i class='bx bxs-calendar'></i></div>
+                                    <h4>High School</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis cupiditate id vel sequi obcaecati autem.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="column-education">
+                        <h3 class="mb-4" data-aos="fade-left" data-aos-duration="1000">Training Course</h3>
+                        <div class="box-style" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
+                            <div class="education-box" >
+                                <div class="content">
+                                    <div class="year">Jan – Aug 2021 <i class='bx bxs-calendar'></i></div>
+                                    <h4>Advanced excel (---) </h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque provident totam cumque.
+                                </p>
+                                </div>
+                            </div>
+                            <div class="education-box">
+                                <div class="content">
+                                    <div class="year">Nov 15, 2020 <i class='bx bxs-calendar'></i></div>
+                                    <h4>Fonted</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut incidunt minima labore totam perferendis fugiat laudantium non consequuntur voluptate accusantium!
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+        </section>
+
+        <section class="skill-section" id="skills" style="padding-top: 7rem;">
+
+                <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">My Skills</h2>
+                
+                <div class="container">
+                    <h3 class="text-light text-start">Focus Website</h3>
+                </div>
+                <div class="skills-grid container">
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i class="fab fa-html5"></i>
+                            <h3>HTML</h3>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card" >
+                            <i class="fab fa-css3-alt"></i>
+                            <h3>CSS</h3>
+                            <p>Advanced</p>
+                        </div>
+                    </div>
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card" >
+                            <i class="fab fa-js"></i>
+                            <h3>JavaScript</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i class='bx bxl-jquery'></i>
+                            <h3>Jquery</h3>
+                            <p>Basic</p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i class="fa-brands fa-php"></i>
+                            <h3>PHP</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </div> -->
+                    
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i class="fa-brands fa-laravel"></i>
+                            <h3>Laravel</h3>
+                            <p>Basic</p>
+                        </div>
+                    </div>
+
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i class='bx bxl-tailwind-css'></i>
+                            <h3>Tailwind</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <h3>Boostrap 5</h3>
+                            <p>Intermediate</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="container">
+                    <h3 class="text-light text-start mt-3">Graphic Design & Edit Video</h3>
+                </div>
+
+                <div class="skills-grid container">
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i><img src="image/image_icon/adobe-photoshop-icon.png" alt="Project"></i>
+                            <h3>Photo Shop</h3>
+                            <p>Can Used</p>
+                        </div>
+                    </div>
+                    
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i><img src="image/image_icon/canva.svg" alt="Project"></i>
+                            <h3>Canva</h3>
+                            <p>Can Used</p>
+                        </div>
+                    </div>
+                    
+                    <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i><img src="image/image_icon/Wondershare.png" alt="Project"></i>
+                            <h3>Wondershare Filmora 13</Frame></h3>
+                            <p>Can Used</p>
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="" data-aos="flip-left" data-aos-duration="1000">
+                        <div class="skill-card">
+                            <i><img src="image/image_icon/Microdoft-office.png" alt="Project"></i>
+                            <h3>Microsoft-office</h3>
+                            <p>Can Used</p>
+                        </div>
+                    </div> -->
+                    
+                </div>
+
+                <div class="container">
+                    <h3 class="text-light text-start mt-3">Other skills</h3>
+                </div>
+                ________________________________________________________________________________________________________________________________________________________________________________________________
+        </section>
+
+        <section class="project-section" id="project">
+            <h2 class="section-title text-center" data-aos="zoom-in" data-aos-duration="1000">Projects</h2>
+
+            <div class="project-content container">
+    
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                        <div class="image-slider">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+                            <!-- Navigation Buttons -->
+                            <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                            <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                        </div>
+                        <div class="text-product">
+                            <article>
+                                <h4>Template Animation</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium delectus vitae commodi veritatis a.</p>
+
+                                <div class="skill-tags">
+                                    <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</div>
+                                    <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                                    <div class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</div>
+                                    <div class="skill-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap 5</div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                        <div class="image-slider">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+                            <img src="https://placehold.co/600x400" alt="Project">
+
+                            <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                            <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                        </div>
+                        <div class="text-product">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <article>
+                                    <b>Template Sabay</b>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium delectus vitae commodi veritatis a.</p>
+
+                                    <div class="skill-tags">
+                                        <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</div>
+                                        <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                                        <div class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</div>
+                                        <div class="skill-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap 5</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                        <div class="image-slider">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+    
+                            <!-- Navigation Buttons -->
+                            <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                            <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                        </div>
+                        <div class="text-product">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <article>
+                                    <b>Template Form Authorization</b>
+                                    <p>Web design & using Html Css & Bootstrap 5</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="project-content">
+    
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                    <div class="image-slider">
+                        <img src="https://placehold.co/600x400" alt="Project">
+                        <img src="https://placehold.co/500x400" alt="Project">
+                        <img src="https://placehold.co/600x400" alt="Project">
+                        <img src="https://placehold.co/500x400" alt="Project">
+                        
+                        <!-- Navigation Buttons -->
+                        <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                        <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                    </div>
+                        <div class="text-product">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <article>
+                                    <b>Manage System Higher-secondary-education</b>
+                                    <p>Web design & using Html Css & Boostrap 5</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                        <div class="image-slider">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+
+                            <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                            <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                        </div>
+                        <div class="text-product">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <article>
+                                    <b>PHP System use write object-oriented</b>
+                                    <p>Web design & using Html Css & Bootsrtap 5</p>
+                                </article>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                        <div class="image-slider">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+    
+                            <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                            <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                        </div>
+                        <div class="text-product">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <article>
+                                    <b>Template Calculate</b>
+                                    <p>Web design & using Html Css</p>
+                                </article>
+                            </div>
+                        </div>          
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="project-content">
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                        <div class="image-slider">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+                            <!-- Navigation Buttons -->
+                            <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                            <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                        </div>
+                        <div class="text-product">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <article>
+                                    <b>E-commerce Website</b>
+                                    <p>Using Html Css Javascript Jquery Php Laravel & boostrap 5 Developing 2025 with team // Comming Soon</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                        <div class="image-slider">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+                            <img src="https://placehold.co/600x400" alt="Project">
+                            <img src="https://placehold.co/500x400" alt="Project">
+
+                            <!-- Navigation Buttons -->
+                            <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                            <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                        </div>
+                        <div class="text-product">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <article>
+                                    <b>Template CV</b>
+                                    <p>Using Html Css and Tailwind Css 4.1</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Other system use software Aceess -->
+            <div class="project-content">
+                <div class="project-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="title-product text-center">
+                        <div class="image-slider">
+                            <img src="image/iamge_project/Access/access.png" alt="Project">
+                            <img src="image/iamge_project/Access/access-1.png" alt="Project">
+                            <img src="image/iamge_project/Access/access-2.png" alt="Project">
+                            <img src="image/iamge_project/Access/access-3.png" alt="Project">
+                            <img src="image/iamge_project/Access/access-4.png" alt="Project">
+                            <img src="image/iamge_project/Access/access-5.png" alt="Project">
+                            <img src="image/iamge_project/Access/access-6.png" alt="Project">
+    
+                            <!-- Navigation Buttons -->
+                            <button class="prev" onclick="prevSlide()"><i class='bx bx-chevron-left' ></i></button>
+                            <button class="next" onclick="nextSlide()"><i class='bx bx-chevron-right'></i></button>
+                        </div>
+                        <div class="text-product">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <article>
+                                    <b>Manage System Higher-secondary-education</b>
+                                    <p>Using software Access Out project Practice</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- This section for experience-section Volunteer -->
+        <section class="experience-section mt-5" id="experience" style="padding-top: 12rem;">
+            <h2 class="section-title text-center" data-aos="zoom-in" data-aos-duration="1000">Work <span>Experience </span></h2>
+            <div class="experience-content container flex gap-5">
+                <div class="column-experience">
+                    <div class="box-style" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="800">
+
+                        <div class="education-box" >
+                            <div class="content">
+                                <div class="year">Dec 2019 – Aug 2024 <i class='bx bxs-calendar'></i></div>
+                                <h3>Teacher's Assistant</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero officiis voluptas dignissimos accusamus labore? Assumenda aut laudantium quisquam beatae deserunt, fugit consequatur dolorum obcaecati laborum.</p>
+                            </div>
+                            <div class="content">
+                                <div class="year">Dec 2014 – Aug 2020 <i class='bx bxs-calendar'></i></div>
+                                <h3>Traning</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero officiis voluptas dignissimos accusamus labore? Assumenda aut laudantium quisquam beatae deserunt, fugit consequatur dolorum obcaecati laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+        </div>
+        </section>
+
+        <section class="contact-section text-center" id="contact" style="padding-top: 12rem;">
+            <h2 data-aos="zoom-in-down" data-aos-duration="1000">Contact Me</h2>
+            <p data-aos="zoom-in-down" data-aos-duration="1000">Let's connect! Feel free to reach out for collaboration or inquiries.</p>
+            
+            <div class="contact-content" data-aos="zoom-in-up" data-aos-duration="1300">
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Enter your gmail.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="address" placeholder="Enter your Address" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Write your description here..." rows="6"  required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="send-button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+        
+
+    </div>
+    <!--Waves Container-->
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+        <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
+    </div>
+<!--Waves end-->
+</div>
+
+
+<!--Content starts-->
+<div class="content content-footer flex">
+        <p>Write by Mr.Hong</p>
+    </div>
+    <a id="button_up">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- jQuery Script -->
+
+        <!--Header ends-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="js/btn_scroll_up.js"></script>
+    <script src="js/background-anime.js"></script>
+    <!--Content ends-->
+</body>
+</html>

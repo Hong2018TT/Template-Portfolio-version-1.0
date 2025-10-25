@@ -1,0 +1,268 @@
+:root{
+    --white : #fff;
+    --black : #000;
+    --aqua : rgb(0, 255, 247);
+    --aqua-home : rgba(84,58,183,1);
+    --bg-transparent : transparent;
+}
+
+.darkLight-searchBox{display: flex;margin-top: 5px;}
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle{
+    height: 30px;
+    width: 30px;
+    display: flex;
+}
+.dark-light i,
+.searchToggle i{
+    position: absolute;
+    color:var(--white);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Set style Title my information */
+body.dark .about-section h2{
+    color:var(--aqua);
+}
+
+body.dark .education-section h2{
+    color:var(--aqua);
+}
+
+body.dark .skill-section h2{
+    color:var(--aqua);
+}
+
+body.dark .project-section h2{
+    color:var(--aqua);
+}
+
+body.dark .experience-section h2{
+    color:var(--aqua);
+}
+
+body.dark .contact-section h2{
+    color: var(--aqua);
+}
+
+/* Dark mode */
+body.dark {
+    background-color: #020d18;
+}
+
+/* Header container in dark mode */
+body.dark .header-wase .inner-header .header-container{
+    background-color: var(--bg-transparent);
+    box-shadow: rgba(0, 138, 108, 0.152) 0px 11px 15px -3px, rgba(0, 128, 105, 0.113) 0px 4px 6px -2px;
+}
+body.dark .dark-light i,.searchToggle i{
+    color:var(--aqua);
+}
+body.dark .logo a{
+    color:var(--aqua);
+}
+body.dark .header-wase .navbara a{
+    color:var(--aqua);
+}
+body.dark .navbar-menu-style a:after {
+    background-color: var(--aqua);
+}
+
+body.dark .dynamic-txts li span::after{
+    background-color: #020d18;
+}
+body.dark .dynamic-txts li {
+    text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.3);
+}
+
+/* Style Spical Write contact to me */
+body.dark .spical_write .icon span {
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.3);
+}
+body.dark .spical_write .facebook:hover span,
+    .spical_write .facebook:hover .tooltip {
+    background: #3B5999;
+  }
+      
+  body.dark .spical_write .instagram:hover span,
+    .spical_write .instagram:hover .tooltip {
+    background: #e1306c;
+  }
+      
+  body.dark .spical_write .github:hover span,
+    .spical_write .github:hover .tooltip {
+    background: #333;
+  }
+      
+  body.dark .spical_write .youtube:hover span,
+    .spical_write .youtube:hover .tooltip {
+    background: #DE463B;
+  }
+  
+  body.dark  .spical_write .tiktok:hover span,
+  .spical_write .tiktok:hover .tooltip {
+    background: #180e0e;
+}
+  
+/* Style button hover about me */
+body.dark .hire-me-btn{
+    border-color:var(--aqua);
+}
+body.dark .content-me{
+    border-color:var(--aqua);
+}
+body.dark .content-me::before, body.dark .content-me::after {
+    background-color: var(--aqua);
+}
+body.dark .hire-me-btn::before, body.dark .hire-me-btn::after {
+    background-color: var(--aqua);
+}
+body.dark .content-me{
+    font-weight: bolder;
+}
+body.dark .content-me:hover {
+    color:var(--black);
+}
+
+/* Style button scroll up */
+body.dark #button_up{
+    background-color: #020d18;
+}
+
+body.dark .education-box .content{
+    border: .2rem solid rgba(0, 255, 255, 0.4);
+}
+body.dark .box-style{
+    border-left: .2rem solid rgba(0, 255, 255, 0.4);
+}
+body.dark .content::before{
+    background: var(--aqua);
+}
+
+body.dark .card-profile{
+    box-shadow: rgba(0, 255, 221, 0.487) 0px 30px 90px;
+}
+/* Border Card Profile */
+body.dark .card-profile span:nth-child(1){
+    background:linear-gradient(to right, #ffffff ,var(--aqua));
+}
+body.dark .card-profile span:nth-child(2){
+    background:linear-gradient(to bottom, #ffffff ,var(--aqua));
+}
+body.dark .card-profile span:nth-child(3){
+    background:linear-gradient(to left, #ffffff ,var(--aqua));
+}
+body.dark .card-profile span:nth-child(4){
+    background:linear-gradient(to top, #ffffff ,var(--aqua));
+}
+body.dark::-webkit-scrollbar-track {
+    background-color: #020d18;
+}
+body.dark::-webkit-scrollbar-thumb {
+    background: #00ffe542;
+}
+
+body.dark .container-loader .loader1:after {
+    background:rgba(0, 255, 255, 0.4);
+}
+body.dark .loader2:after {
+    background:rgba(0, 255, 255, 0.4);;
+}
+
+/* Set style Hover carts */
+body.dark .skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: rgba(0, 255, 255, 0.4) 0px 5px, 
+    rgba(0, 255, 255, 0.3) 0px 10px, 
+    rgba(0, 255, 255, 0.2) 0px 15px, 
+    rgba(0, 255, 255, 0.1) 0px 20px, 
+    rgba(0, 255, 255, 0.05) 0px 25px;
+
+}
+
+/* Change wave colors in dark mode */
+/* Dark mode colors */
+body.dark .waves .parallax use:nth-child(1) { fill: rgba(0, 255, 247, 0.7); }
+body.dark .waves .parallax use:nth-child(2) { fill: rgba(0, 255, 247, 0.5); }
+body.dark .waves .parallax use:nth-child(3) { fill: rgba(0, 255, 247, 0.3); }
+body.dark .waves .parallax use:nth-child(4) { fill: rgb(0, 255, 247); }
+
+body.dark .content-footer{
+    background-color: var(--aqua);
+}
+
+/* Contsct me */
+body.dark .contact-content form .form-row{
+    & input{
+        background-color: rgba(0, 255, 255, 0.1);
+    }
+}
+body.dark .contact-content form{
+   textarea{
+        background-color: rgba(0, 255, 255, 0.1);
+    } 
+}
+
+/* Project content */
+body.dark .project-content .project-card .title-product .image-slider{
+    & .prev, .next{
+        background: rgba(0, 255, 255, 0.4);
+    }
+
+    & .prev i , .next i{
+        color: var(--black);
+    }
+}
+
+body.dark .skill-card:hover h3 {
+    text-shadow: 0px 0px 10px rgba(63, 81, 181, 0.7);
+}
+    
+/* @Media screen */
+@media (max-width: 768px) {
+    body.dark .header-wase .inner-header .header-container{
+      & .navbara{
+        background-color: rgba(0, 255, 255, 0.8);
+            & a{
+                text-shadow: 1px 2px 1px rgb(255, 252, 252);
+            }
+
+            & .dark-light{
+                & i{
+                    text-shadow: 1px 2px 1px rgb(255, 252, 252);
+                }
+              }
+        }
+    }
+    body.dark .navbar-menu-style a:after {
+        background-color:#ffffff9c;
+    }
+
+
+    body.dark .parallax > use:nth-child(1) {
+        background-color: var(--aqua);
+    }
+    body.dark .parallax > use:nth-child(2) {
+        background-color: var(--aqua);
+    }
+    body.dark .parallax > use:nth-child(3) {
+        background-color: var(--aqua);
+    }
+    body.dark .parallax > use:nth-child(4) {
+        background-color: var(--aqua);
+    }
+  }

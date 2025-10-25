@@ -1,0 +1,89 @@
+:root{
+    --white : rgba(245,245,235,1);
+    --black : #000;
+    --aqua : aqua;
+    --aqua-home : rgba(84,58,183,1);
+    --white-gray : rgb(188, 188, 188);
+  }
+/* Section Styling */
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+/* Skill Card */
+.skill-card {
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, .2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 5px, 
+                rgba(255, 255, 255, 0.3) 0px 10px, 
+                rgba(255, 255, 255, 0.2) 0px 15px, 
+                rgba(255, 255, 255, 0.1) 0px 20px, 
+                rgba(255, 255, 255, 0.05) 0px 25px;
+}
+
+
+/* Change icon color on hover */
+.skill-card:hover i {
+    color: var(--aqua-home); /* Change to your preferred hover color */
+    transition: all 0.5s;
+    transform: scale(1.1); /* Slight zoom effect */
+}
+.skill-card:hover h3 {
+    color: #3f51b5; /* Royal Blue */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    transition: all 0.5s;
+}
+
+.skill-card i {
+    font-size: 40px;
+    color:var(--white-gray);
+    margin-bottom: 10px;
+    transition: filter 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+.skill-card img {
+    opacity:0.7;/* Initially in grayscale */
+    transition: filter 0.5s ease-in-out, transform 0.3s ease-in-out;
+    max-width: 100px;
+}
+
+.skill-card:hover img {
+    opacity:1; /* Remove grayscale on hover */
+    transform: 0.5s scale(1.1); /* Slight zoom effect */
+}
+
+.skill-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: var(--white);
+    transition: all 0.2s;
+}
+
+.skill-card p {
+    font-size: 14px;
+    color: rgba(245, 245, 245, 0.634);
+}

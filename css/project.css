@@ -1,0 +1,115 @@
+:root{
+  --white : #fff;
+  --black : #000;
+  --aqua : aqua;
+  --aqua-home : rgb(102, 64, 255);
+}
+.image-slider {
+    width: 100%;
+    height:100%; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+    border-top:5px;
+}
+
+.image-slider img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-slider img:first-child {
+    opacity: 1;
+    position: relative;
+}
+
+/* Navigation Button Styling */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(136, 106, 255, 0.5);
+    color: white;
+    border: none;
+    height: 30px;
+    width:30px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.project-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    justify-content: center; /* Centers items horizontally */
+    grid-gap:20px; /* Space between items */
+    margin: 20px auto; /* Centers the content and adds margin */
+}
+
+.project-card {
+    flex: 1 1 300px; /* Grow and shrink but min width is 300px */
+    max-width: 400px; /* Prevents items from becoming too large */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover .title-product{
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.7);
+    transition: all .4s ease;
+}
+.text-product{
+    backdrop-filter: blur(7px);
+    background: rgba(255, 255, 255, .1);
+    transition: all .4s ease;
+    height:200px;
+    padding: 0.6rem;
+}
+/* --- Skill Tags Section --- */
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+    transform: translateZ(20px);
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.875rem;
+    color: var(--primary-text-color);
+    transition: background 0.3s ease;
+}
+
+.skill-tag i {
+    font-size: 1rem;
+}
+
+.skill-tag:hover {
+    background: rgba(255, 255, 255, 0.25);
+}

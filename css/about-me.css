@@ -1,0 +1,313 @@
+:root{
+    --white : #fff;
+    --black : #000;
+    --aqua : aqua;
+    --aqua-home : rgba(84,58,183,1);
+  }
+
+.personal-info {
+    flex: 1;
+    text-align: left;
+    max-width: 600px;
+    width: 100%; /* Ensure it takes full width */
+}
+
+.personal-info h3 {
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .personal-info h3{
+      font-size: 5vw; /* Adjust size based on viewport width */
+  }
+  .info-table td{
+      font-size: 3.5vw; /* Increase size for smaller screens */
+  }
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.info-table td {
+    padding: 0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    & b{
+      color: #25F4EE;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+  .info-table td{
+      font-size: 2vw; /* Increase size for smaller screens */
+  }
+  
+}
+
+@media screen and (max-width: 580px) {
+  .info-table td{
+      font-size: 3.5vw; /* Increase size for smaller screens */
+  }
+}
+
+.stats {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+    justify-content: center;
+}
+
+.stat-box {
+    text-align: center;
+    max-width: 150px;
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    box-shadow:/* Dark shadow on the bottom-right */
+    inset 3px 3px 5px rgba(255, 255, 255, 0.15),
+    /* Light shadow on the top-left */
+    inset -3px -3px 5px rgba(255, 255, 255, 0.15);
+}
+
+.stat-box h4 {
+    font-size: 2.5rem;
+    color: #25F4EE;
+}
+
+.stat-box p {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Style button scroll up */
+#button_up{
+  background-color:rgba(84,58,183,1);
+  width:50px;height:50px;
+  line-height: 60px;
+  text-align:center;
+  border-radius: 4px;
+  position:fixed;
+  bottom:30px; border:none;
+  right:30px; border-radius: 50%;
+  opacity:0.5s,visibility .5s;
+  opacity: 0;
+  transition: all .3s;z-index:100;
+}
+#button_up i{font-size: 32px;color:#Fff;}
+#button_up:hover{cursor: pointer;background-color: #7337e3;}
+#button_up.show{opacity: 1;}
+
+
+/* Hire Me Button */
+.hire-me-btn,.content-me{
+    margin-top: 20px;
+    padding: 5px 15px;;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 14px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color:var(--white);
+    z-index: 1;backdrop-filter: blur(5px);
+  }
+  
+  .hire-me-btn::before, .hire-me-btn::after {
+    content: '';
+    display: block;
+    width: 42px;
+    height: 42px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--white);
+    transition: 1s ease;
+  }
+  
+  .hire-me-btn::before {
+    top: -1em;
+    left: -1em;
+  }
+  
+  .hire-me-btn::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+  
+  .hire-me-btn:hover::before, .hire-me-btn:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+  
+  .hire-me-btn:active {
+    filter: brightness(.8);
+  }
+
+  .content-me::before, .content-me::after {
+    content: '';
+    display: block;
+    width: 42px;
+    height: 42px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--white);
+    transition: 1s ease;
+  }
+  
+  .content-me::before {
+    top: -1em;
+    left: -1em;
+  }
+  
+  .content-me::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+  }
+  
+  .content-me:hover::before, .content-me:hover::after {
+    height: 410px;
+    width: 410px;
+  }
+  
+  .content-me:hover {
+    color:var(--aqua-home);
+  }
+
+  .content-me{
+    font-weight:bolder;
+  }
+  
+  .content-me:active {
+    filter: brightness(.8);
+  }
+
+  .btn-con-hire a{
+    text-decoration:none;
+  }
+
+/* ===================================================== For set Speical  ====================================================*/
+.pay img{height:auto;width:60px;}
+  .Verified img{height:auto;width:60px;}
+  .spical_write a i{color:var(--black);}
+
+  .spical_write {
+      display: inline-flex;
+      /* padding-top: 40px; */
+    }
+    
+    .spical_write .icon {
+      margin-inline: 8px;
+      text-align: center;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 2;
+      text-decoration: none;
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .spical_write .icon span {
+      display: block;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      backdrop-filter: blur(5px);
+      position: relative;
+      z-index: 2;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    
+    .spical_write .icon span i {
+      line-height: 50px;
+      font-size: 20px;color:white;
+    }
+      
+    .spical_write .icon .tooltip {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      background: #fff;
+      color: #fff;
+      padding: 8px 10px;
+      font-size: 12.5px;
+      font-weight: 500;
+      border-radius: 25px;
+      opacity: 0;
+      pointer-events: none;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+      transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+      
+    .spical_write .icon:hover .tooltip {
+      top: -50px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+      
+    .icon .tooltip:before {
+      position: absolute;
+      content: "";
+      height: 15px;
+      width: 15px;
+      background: inherit;
+      left: 50%;
+      bottom: -6px;
+      transform: translateX(-50%) rotate(45deg);
+    }
+      
+    .spical_write .icon:hover span i{
+      color: #fff;
+    }
+      
+    .spical_write .icon:hover span,
+    .spical_write .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+  }
+      
+    .spical_write .facebook:hover span,
+    .spical_write .facebook:hover .tooltip {
+    background: #3B5999;
+  }
+      
+    .spical_write .instagram:hover span,
+    .spical_write .instagram:hover .tooltip {
+    background: #e1306c;
+  }
+      
+  .spical_write .github:hover span,
+    .spical_write .github:hover .tooltip {
+    background: #333;
+  }
+      
+    .spical_write .youtube:hover span,
+    .spical_write .youtube:hover .tooltip {
+    background: #DE463B;
+  }
+
+  .spical_write .tiktok:hover span{
+    text-shadow:2px 2px 1px #FE2C55,-2px -2px 1px #25F4EE;
+  }
+
+  .spical_write .tiktok:hover span,
+  .spical_write .tiktok:hover .tooltip {
+    background: #180e0e;
+}
